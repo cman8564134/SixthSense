@@ -119,16 +119,29 @@ ${demo.css}
 
   // Get a reference to the database service
   var database = firebase.database();
-	var Ref = database.ref('/');
+	var Ref = database.ref('/001/record');
 	Ref.on('value', function(data) {
 	var record = data.val();
 			 console.log(record);
 			 var i = 1;
 			 $.each(record, function(value, index){
 				 console.log(index);
-				 	$("#name"+i).text(index.Name);
-					$("#info"+i).text(index.Information);
+					$("#one"+i).text(index.bark);
+					$("#one"+i).text(index.legs);
+					$("#one"+i).text(index.meow);
 					i++;
+
+		var Ref = database.ref('/002/record');
+					Ref.on('value', function(data) {
+					var record = data.val();
+							 console.log(record);
+							 var i = 1;
+							 $.each(record, function(value, index){
+								 console.log(index);
+									$("#two"+i).text(index.bark);
+									$("#two"+i).text(index.legs);
+									$("#two"+i).text(index.meow);
+									i++;
 			 })
 });
 
