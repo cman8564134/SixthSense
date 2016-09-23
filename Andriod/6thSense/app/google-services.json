@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "598799593902",
+    "firebase_url": "https://sixthsense-14e9a.firebaseio.com",
+    "project_id": "sixthsense-14e9a",
+    "storage_bucket": "sixthsense-14e9a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:598799593902:android:3e17d6e242d1fadc",
+        "android_client_info": {
+          "package_name": "com.example.user.sixthsense"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "598799593902-s4s2b4kgj715uiub9bceuqett9496rn8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDoM6QG69HwJxv8ZLt5cyPATcWypThPz6Q"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
