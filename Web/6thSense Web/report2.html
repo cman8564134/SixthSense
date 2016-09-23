@@ -28,10 +28,10 @@ ${demo.css}
 <div class="wrapper">
     <div class="sidebar" data-color="blue" data-image="assets/img/sidebar-5.jpg.">
 
-    	<div class="sidebar-wrapper">
-            <div class="logo">
-                <img src="logo.png"><br> SixthSense
-            </div>
+			<div class="sidebar-wrapper">
+				<div class="logo">
+						<img src="logo.png"><br> SixthSense
+				</div>
 
             <ul class="nav">
                 <li>
@@ -40,12 +40,13 @@ ${demo.css}
                         <p>All Locations</p>
                     </a>
                 </li>
-								<li class="active">
+								<li>
 									<a href="report.html">
 											<i class="pe-7s-graph"></i>
 											<p>Report(Public Facilities)</p></a>
 										</li>
-										<li>
+
+										<li class="active">
 											<a href="report2.html">
 													<i class="pe-7s-graph"></i>
 													<p>Report(Public Transport)</p></a>
@@ -79,14 +80,48 @@ ${demo.css}
 							<div class="col-md-4">
                   <div class="card">
                       <div class="header">
-												<img src="http://www.letsgokualalumpur.com/wp-content/uploads/2014/11/KLCC-playground.jpg" width="50%">
-												<h4>Location: KLCC Park</h4>
-												<h4>Cleanliness:</h4><h4 id="bark1"></h4>
-												<h5>Accesibility:</h5><h5 id="legs1"></h5>
-												<p>In need of mantainence?:</p><p id="meow1"></p>
+												<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Kelana_Jaya_Line_KLCC.jpg/600px-Kelana_Jaya_Line_KLCC.jpg" width="50%">
+												<h4>Location: KLCC LRT</h4>
+													<h4>Cleanliness:</h4><h4 id="bark1"></h4>
+													<h5>Accesibility:</h5><h5 id="legs1"></h5>
+													<p>In need of mantainence?:</p><p id="meow1"> </p>
                       </div>
 										</div>
 										</div>
+										<div class="col-md-4">
+			                  <div class="card">
+			                      <div class="header">
+															<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Kelana_Jaya_Line_KLCC.jpg/600px-Kelana_Jaya_Line_KLCC.jpg" width="50%">
+															<h4>Location: KLCC LRT</h4>
+															<h4>Cleanliness:</h4><h4 id="bark2"></h4>
+															<h5>Accesibility:</h5><h5 id="legs2"></h5>
+															<p>In need of mantainence?:</p><p id="meow2"> </p>
+			                      </div>
+													</div>
+													</div>
+													<div class="col-md-4">
+						                  <div class="card">
+						                      <div class="header">
+																		<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Kelana_Jaya_Line_KLCC.jpg/600px-Kelana_Jaya_Line_KLCC.jpg" width="50%">
+																		<h4>Location: KLCC LRT</h4>
+																		<h4>Cleanliness:</h4><h4 id="bark3"></h4>
+																		<h5>Accesibility:</h5><h5 id="legs3"></h5>
+																		<p>In need of mantainence?:</p><p id="meow3"> </p>
+						                      </div>
+																</div>
+																</div>
+																<div class="col-md-4">
+									                  <div class="card">
+									                      <div class="header">
+																					<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Kelana_Jaya_Line_KLCC.jpg/600px-Kelana_Jaya_Line_KLCC.jpg" width="50%">
+																					<h4>Location: KLCC LRT</h4>
+																					<h4>Cleanliness:</h4><h4 id="bark4"></h4>
+																					<h5>Accesibility:</h5><h5 id="legs4"></h5>
+																					<p>In need of mantainence?:</p><p id="meow4"> </p>
+									                      </div>
+																			</div>
+																			</div>
+
 								</div>
 
 
@@ -118,7 +153,7 @@ ${demo.css}
 
   // Get a reference to the database service
   var database = firebase.database();
-	var Ref = database.ref('/001/record');
+	var Ref = database.ref('/002/record');
 	Ref.on('value', function(data) {
 	var record = data.val();
 			 console.log(record);

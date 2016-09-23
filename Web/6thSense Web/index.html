@@ -29,18 +29,18 @@ ${demo.css}
     <div class="sidebar" data-color="blue" data-image="assets/img/sidebar-5.jpg.">
 
     	<div class="sidebar-wrapper">
-            <div class="logo">
-                <img src="logo.png"><br> SixthSense
-            </div>
+				<div class="logo">
+						<img src="logo.png"><br> SixthSense
+				</div>
 
             <ul class="nav">
                 <li>
                     <a href="index.html">
-                        <i class="pe-7s-world"></i>
-                        <p>All Locations</p>
+                        <i class="pe-7s-graph"></i>
+                        <p>All locations</p>
                     </a>
                 </li>
-								<li class="active">
+								<li>
 									<a href="report.html">
 											<i class="pe-7s-graph"></i>
 											<p>Report(Public Facilities)</p></a>
@@ -64,7 +64,7 @@ ${demo.css}
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html">The Internet of Places</a>
+                    <a class="navbar-brand" href="">The Internet of Places</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
@@ -76,16 +76,24 @@ ${demo.css}
 
         <div class="content">
             <div class="container-fluid">
-							<div class="col-md-4">
+							<div class="col-md-6">
                   <div class="card">
                       <div class="header">
 												<img src="http://www.letsgokualalumpur.com/wp-content/uploads/2014/11/KLCC-playground.jpg" width="50%">
-												<h4>Location: KLCC Park</h4>
-												<h4>Cleanliness:</h4><h4 id="bark1"></h4>
-												<h5>Accesibility:</h5><h5 id="legs1"></h5>
-												<p>In need of mantainence?:</p><p id="meow1"></p>
+                          <h4>Location:</h4><h4 id="name1"></h4>
+													<h5>Category:</h5><h5 id "category1"></h5>
+													<p>Information:</p><p id="info1"></p>
                       </div>
 										</div>
+
+										<div class="card">
+                        <div class="header">
+													<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Kelana_Jaya_Line_KLCC.jpg/600px-Kelana_Jaya_Line_KLCC.jpg" width="50%">
+                            <h4>Location:</h4><h4 id="name2"></h4>
+														<h5>Category:</h5><h5 id "category2"></h5>
+														<p>Information:</p><p id="info2"></p>
+                        </div>
+											</div>
 										</div>
 								</div>
 
@@ -109,7 +117,7 @@ ${demo.css}
 	<script>// Set the configuration for your app
   // TODO: Replace with your project's config object
   var config = {
-		apiKey: "AIzaSyBudB2_mWlsblBUlOW2UXfkf5WCp7mBoZQ",
+    apiKey: "AIzaSyBudB2_mWlsblBUlOW2UXfkf5WCp7mBoZQ",
     authDomain: "sixthsense-14e9a.firebaseapp.com",
     databaseURL: "https://sixthsense-14e9a.firebaseio.com/",
     storageBucket: "bucket.appspot.com"
@@ -118,16 +126,16 @@ ${demo.css}
 
   // Get a reference to the database service
   var database = firebase.database();
-	var Ref = database.ref('/001/record');
+	var Ref = database.ref('/');
 	Ref.on('value', function(data) {
 	var record = data.val();
 			 console.log(record);
 			 var i = 1;
 			 $.each(record, function(value, index){
 				 console.log(index);
-					$("#bark"+i).text(index.bark);
-					$("#legs"+i).text(index.legs);
-					$("#meow"+i).text(index.meow);
+				 	$("#name"+i).text(index.Name);
+					$("#category"+i).text(index.Category);
+					$("#info"+i).text(index.Information);
 					i++;
 			 })
 });
