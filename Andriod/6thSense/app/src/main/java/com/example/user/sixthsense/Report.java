@@ -73,9 +73,9 @@ public class Report extends AppCompatActivity {
         b.setOnClickListener(new View.OnClickListener() {
              public void onClick(View v) {
 
-                 c.setMeow(ans[0]);
+                 c.setBark(ans[0]);
                  c.setLegs(ans[1]);
-                 c.setBark(ans[2]);
+                 c.setMeow(ans[2]);
                  DatabaseReference mFirebaseDatabaseReference = FirebaseDatabase.getInstance().getReference();
                  mFirebaseDatabaseReference.child(res).child("record").push().setValue(c);
                  finish();

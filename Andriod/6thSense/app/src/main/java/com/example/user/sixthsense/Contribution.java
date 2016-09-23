@@ -8,14 +8,17 @@ public class Contribution {
 
     private String Bark;
     private String Legs;
-    private String Meow;
+    private boolean Meow;
 
-    public String getMeow() {
+    public boolean getMeow() {
         return Meow;
     }
 
     public void setMeow(String meow) {
-        Meow = meow;
+        if(meow=="Yes")
+        Meow = true;
+        else
+            Meow=false;
     }
 
     public String getLegs() {
